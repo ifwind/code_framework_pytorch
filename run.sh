@@ -1,0 +1,12 @@
+nohup python3 -u main.py \
+    --pretrain_model_path=bert-base-chinese \
+    --device=cuda:0 \
+    --do_train=True \
+    --batch_size=64 \
+    --lr=5e-5 \
+    --epochs=100 \
+    --use_fgm=True \
+    --data_path=./dataset/ \
+    --model_version=none_dropout \
+    --warm_up_epochs=5 \
+    --random_seed=666 > out.log &
